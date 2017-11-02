@@ -1,0 +1,406 @@
+/*
+Theme Name: La Pizzeria
+Theme URI: 
+Author: Yosuani Rodriguez
+Author URI: 
+Description: Theme para sitio web de restaurants o pizzas
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: restaurant, mobile first, responsive, pizza
+Text Domain: pizzeria
+*/
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 28px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+*, *:before, *:after{
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/*Header*/
+
+header.header-site {
+	border-bottom: 1px solid #c1c1c1;
+	padding-bottom: 30px;
+}
+
+div.logo {
+	text-align: center;
+}
+
+img.image-logo {
+	max-width: 250px;
+	width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	
+	div.logo {
+		text-align: left;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+
+	div.logo {
+		text-align: center;
+	}
+	
+}
+
+@media only screen and (min-width: 768px) {
+
+	header.header-site .container {
+		position: relative;
+	}
+
+	.info-header {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+/* Menu social media */
+
+nav.menu-social ul {
+	text-align: center;
+	list-style: none;
+	padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+	nav.menu-social ul {
+		float: right;
+	}
+}
+
+nav.menu-social ul li {
+	position: relative;
+	display: inline-block;
+}
+
+nav.menu-social ul li a:before {
+	content: '\f08e';
+	font-family: 'FontAwesome';
+	font-size: 30px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
+	color: #000000;
+}
+
+nav.menu-social li a[href*="facebook.com"]::before {
+	content: '\f09a';
+}
+
+nav.menu-social li a[href*="twitter.com"]::before {
+	content: '\f099';
+}
+
+nav.menu-social li a[href*="instagram.com"]::before {
+	content: '\f16d';
+}
+
+nav.menu-social li a[href*="linkedin.com"]::before {
+	content: '\f0e1';
+}
+
+.sr-text {
+	display: none;
+}
+
+/* Menu Principal */
+
+nav.menu-site {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+	nav.menu-site {
+		display: block;
+	}
+}
+
+nav.menu-site ul {
+	list-style: none;
+	display: table;
+	margin: 0;
+	padding: 0;
+	width: 100%
+}
+
+nav.menu-site ul li.current_page_item a {
+	border-bottom: 8px solid #a61206; 
+}
+
+nav.menu-site ul li a {
+	text-align: center;
+	padding: 20px 0;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+nav.menu-site ul li a:hover {
+	background-color: #f19f30;
+}
+
+@media only screen and (min-width: 768px) {
+
+	nav.menu-site ul li {
+		display: table-cell;
+		width: 1%;
+	}
+
+}
+
+/* Responsive menu */
+@media only screen and (max-width: 767px) {
+	.menu-mobile a {
+		height: 40px;
+		background-color: #a61206;
+		width: 100%;
+		color: #ffffff !important;
+		display: block;
+		text-align: center;
+		line-height: 40px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.menu-mobile a {
+		display: none;
+	}
+}
+
+/* Template Content */
+
+div.hero {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    height: 450px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+div.hero::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .6);
+}
+
+div.hero .content-hero {
+	display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    position: relative;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+    z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+	div.text-hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-basis: 80%
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	div.text-hero {
+		flex-basis: 60%
+	}
+}
+
+div.prinsipal {
+	padding: 60px;
+	background-color: #FFFFFF;
+	position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+
+	div.prinsipal {
+		margin-top: -90px;
+	}
+}
+
+.content-page p {
+	font-size: 20px;
+	line-height: 50px;
+}
+
+/* FOOTER */
+
+footer {
+	margin-top: 30px;
+	padding: 30px 0;
+	border-top: 2px solid #c1c1c1;
+	text-align: center;
+}
+
+footer nav ul {
+	list-style: none;
+}
+
+footer nav ul li {
+	display: inline-block;
+}
+
+footer nav ul li a {
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px; 
+}
+
+footer nav ul li:last-child .separate {
+	display: none;
+}
+
+footer p.copyright {
+	text-align: center;
+	margin-top: 30px;
+	font-size: 12px
+}
+
+/* Nosotros */
+
+div.information-boxes {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 480px) {
+	.box {
+	    flex-basis: 50%;
+	}
+
+	.box:last-child {
+	    flex-basis: 100%;
+	}
+}
+
+@media only screen and (min-width: 786px) {
+	div.information-boxes {
+		flex-wrap: nowrap;
+	}
+
+	.box {
+	    flex-basis: 100%;
+	}
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+div.information-boxes > div:nth-child(1) {
+	background-color: #f19f30;
+}
+
+div.information-boxes > div:nth-child(2) {
+	background-color: #127427;
+}
+
+div.information-boxes > div:nth-child(3) {
+	background-color: #a61206;
+}
+
+div.description-box {
+	padding: 20px 5px 5px 5px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+@media only screen and (min-width: 992px) {
+	div.description-box {
+		padding: 40px 0; 
+	}
+}
+
+.box.box-center .description-box {
+    order: 1;
+}
+
+@media only screen and (min-width: 480px) {
+	.box.box-center .description-box {
+	    order: 0;
+	}
+} 
+
+div.description-box h4 {
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+
+
+
+
