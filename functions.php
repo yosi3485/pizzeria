@@ -5,6 +5,7 @@
 		add_theme_support('post-thumbnails');
 
 		add_image_size('nosotros', 437, 291, true);
+		add_image_size('especialidades', 768, 515, true);
 
 	}
 
@@ -50,7 +51,7 @@
 	add_action('init', 'pizzeria_menus');
 
 	add_action( 'init', 'pizzeria_especialidades' );
-function lapizzeria_especialidades() {
+function pizzeria_especialidades() {
 	$labels = array(
 		'name'               => _x( 'Pizzas', 'pizzeria' ),
 		'singular_name'      => _x( 'Pizzas', 'post type singular name', 'pizzeria' ),
