@@ -29,7 +29,7 @@ get_header(); ?>
 	<?php endwhile; ?>
 
 	<div class="nuestras-especialidades container">
-		<h3>Pizzas</h3>
+		<h3 class="text-red">Pizzas</h3>
 
 		<div class="container-grid">
 		
@@ -46,7 +46,7 @@ get_header(); ?>
 			while ($pizzas->have_posts()): $pizzas->the_post();
 			?>
 
-			<div class="">
+			<div class="items">
 				
 				<?php the_post_thumbnail('especialidades'); ?>
 

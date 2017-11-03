@@ -49,6 +49,10 @@ img {
 	text-align: center;
 }
 
+.text-red {
+	color: #a61206;
+}
+
 *, *:before, *:after{
 	box-sizing: border-box;
 }
@@ -398,6 +402,26 @@ div.description-box h4 {
 	font-weight: normal;
 	text-transform: uppercase;
 	margin: 0;
+}
+
+/* Especialidades */
+
+.container-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-grid .items {
+    padding: 0px;
+    flex: 1 1 100%;
+}
+
+@media only screen and (min-width: 786px) {
+	.container-grid .items {
+	    padding: 10px;
+	    flex: 1 1 50%;
+	}
 }
 
 
